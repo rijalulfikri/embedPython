@@ -19,7 +19,8 @@ PyRun::PyRun(QString execFile)
     Py_SetProgramName((wchar_t*) this->execFile.c_str());
 
     // Set module search path
-    Py_SetPath(this->pythonPath.c_str());
+    //Py_SetPath(this->pythonPath.c_str());  //Kenapa tanpa ini, aplikasi ini tetap jalan?
+    //Py_SetPath(L"/usr/local/Cellar/python3/3.6.4/Frameworks/Python.framework/Versions/3.6/lib/python36.zip:/usr/local/Cellar/python3/3.6.4/Frameworks/Python.framework/Versions/3.6/lib/python3.6/lib-    dynload:/Volumes/D/projects/Qt/libpy36.zip");
 
     Py_NoSiteFlag = 1;
 
